@@ -1,6 +1,11 @@
-for (let i = 0; i < 5; i++){
-    console.log("*")
-    for (let j = 0; j < 5; j++){
-        console.log("#")
+function createPattern(rows) {
+  for (let i = 1; i <= rows; i++) {
+    let pattern = "";
+    for (let j = 1; j <= i; j++) {
+      pattern += "* ";
     }
+    console.log(pattern);
+  }
 }
+
+createPattern(5);
