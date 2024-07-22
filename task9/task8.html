@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add/Remove CSS Class</title>
+    <style>
+        .highlight {
+            background-color: rgb(132, 240, 96);
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="myParagraph">This is a paragraph.</p>
+    <button onclick="addClass()">Add Highlight Class</button>
+    <button onclick="removeClass()">Remove Highlight Class</button>
+
+    <script>
+        function addClass() {
+            const paragraph = document.getElementById('myParagraph');
+
+            paragraph.classList.add('highlight');
+
+        }
+
+        function removeClass() {
+            const paragraph = document.getElementById('myParagraph');
+
+            paragraph.classList.remove('highlight');
+
+        }
+    </script>
+</body>
+
+</html>
