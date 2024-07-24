@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="para" style="background-color: red;">change background color</p>
+
+
+    <script>
+        const para = document.querySelector(".para")
+        para.addEventListener("mouseout", () => {
+            // console.log("hello")
+            if (para.style.backgroundColor === 'red') {
+                para.style.backgroundColor = 'white';
+            } 
+            // else {
+            //     para.style.backgroundColor = 'white';
+            // }
+        })
+
+    </script>
+
+</body>
+
+</html>

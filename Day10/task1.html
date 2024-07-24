@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onClick="changePara()">change paragraph</button>
+    <p class="para">this is a paragraph</p>
+
+    <script>
+        function changePara() {
+            let para = document.querySelector(".para")
+            console.log("changed para")
+            para.innerText = "changed paragraph"
+        }
+    </script>
+</body>
+
+</html>

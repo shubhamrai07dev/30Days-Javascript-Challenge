@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Change Event</title>
+</head>
+
+<body>
+    <select id="myDropdown">
+        <option >Select One Option</option>
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+    </select>
+    <p id="displayText">Selected value will be displayed here.</p>
+    <script>
+
+        const dropdown = document.getElementById('myDropdown');
+        const displayText = document.getElementById('displayText');
+
+        dropdown.addEventListener('change', () => {
+            displayText.textContent = `Selected value: ${dropdown.value}`;
+
+            // displayText.innerText = `Selected value: ${dropdown.value}`;
+        });
+
+
+    </script>
+</body>
+
+</html>

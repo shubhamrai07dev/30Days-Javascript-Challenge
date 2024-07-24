@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation with Dynamic Elements</title>
+</head>
+
+<body>
+    <button id="addElementButton">Add Element</button>
+    <div id="parentElement">
+        <!-- Dynamically added elements will go here -->
+    </div>
+
+    <script>
+        const parentElement = document.getElementById('parentElement');
+        const addElementButton = document.getElementById('addElementButton');
+
+        parentElement.addEventListener('click', (event) => {
+        if (event.target && event.target.classList.contains('childElement')) {
+        console.log(`Clicked element text: ${event.target.textContent}`);
+        }
+        });
+
+        // Add a new child element to the parent element when the button is clicked
+        addElementButton.addEventListener('click', () => {
+        const newElement = document.createElement('div');
+        newElement.classList.add('childElement');
+        newElement.textContent = `New Element ${parentElement.children.length + 1}`;
+        parentElement.appendChild(newElement);
+        });
+
+
+
+        </script>
+</body>
+
+</html>

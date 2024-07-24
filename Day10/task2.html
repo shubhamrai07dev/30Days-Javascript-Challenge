@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onClick ="toggleImg()" id="btn">double click to toggle</button>
+    <img class="img" src="downloadHTML.png" alt="image">
+    
+    <script>
+        const img = document.querySelector(".img")
+        const btn = document.querySelector("#btn")
+        btn.addEventListener("dblclick", () =>{
+            if (img.style.display === 'none') {
+                img.style.display = 'block';
+            } else {
+                img.style.display = 'none';
+            }
+        })
+        
+    </script>
+</body>
+</html>
