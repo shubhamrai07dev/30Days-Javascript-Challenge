@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Example</title>
+</head>
+
+<body>
+    <script>
+        // Create an object
+        const myObject = {
+            name: 'John Doe',
+            age: 30,
+            city: 'New York'
+        };
+        // Convert the object to a JSON string and save it to local storage
+        localStorage.setItem('myObject', JSON.stringify(myObject));
+
+        // Retrieve the JSON string from local storage
+        const retrievedObjectString = localStorage.getItem('myObject');
+
+        // Parse the JSON string back to an object
+        const retrievedObject = JSON.parse(retrievedObjectString);
+
+        // Log the retrieved object
+        console.log(retrievedObject);
+    </script>
+</body>
+
+</html>
